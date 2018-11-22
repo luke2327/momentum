@@ -2,6 +2,12 @@ body {
     background-color: ivory;
 }
 
+button,
+input,
+label {
+    outline: none;
+}
+
 p {
     color: #2e2e2e;
 }
@@ -17,4 +23,20 @@ p {
 
 .showing {
     display: block;
+}
+
+.delBtn {
+    border: none;
+    background: none;
+    cursor: pointer
+}
+
+.toDoListBox {
+    padding-left: 0px;
+}
+
+.toDoList {
+    list-style: none;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
