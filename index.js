@@ -1,5 +1,6 @@
 console.log('JS running!');
-function viewInfo(name, age){
+
+function viewInfo(name, age) {
     console.log(`Hello ${name} you are ${age}.`);
     return {
         name: name,
