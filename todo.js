@@ -6,7 +6,7 @@ const TODOS_LS = 'toDos',
     TODO_LIST = 'toDoList',
     DEL_BTN = 'delBtn';
 
-const toDos = [];
+let toDos = [];
 
 // replace Captialize First Text
 function capitalize(text) {
@@ -21,6 +21,18 @@ function capitalize(text) {
     return tag.join(" ").trim();
 }
 
+function deleteToDo(event) {
+    const btn = event.target;
+    const li = btn.parentNode;
+    toDoList.removeChild(li);
+    const cleanToDos = toDos.filter(function (toDo) {
+        console.log(toDo.id, parseInt(li.id));
+        return toDo.id !== parseInt(li.id);
+    });
+    toDos = cleanToDos;
+    saveToDos();
+}
+
 function saveToDos() {
     localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
 }
@@ -32,6 +44,7 @@ function paintToDo(text) {
     const newId = toDos.length + 1;
     li.classList.add(TODO_LIST)
     delBtn.innerHTML = "❌";
+    delBtn.addEventListener("click", deleteToDo);
     delBtn.classList.add(DEL_BTN);
     span.innerText = text;
     li.append(delBtn);
