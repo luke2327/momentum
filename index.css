@@ -5,3 +5,16 @@ body {
 p {
     color: #2e2e2e;
 }
+
+* {
+    font-family: 'Lora', serif;
+}
+
+.form,
+.greetings {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
