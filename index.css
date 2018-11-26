@@ -61,7 +61,7 @@ p {
     font-size: 18px;
 }
 
-.toDoInput {
+.inputArea {
     width: 250px;
     height: 30px;
     font-size: 17px;
@@ -90,4 +90,9 @@ p {
     height: 100%;
     z-index: -1;
     animation: fadeIn .5s linear;
+}
+
+.weather{
+    margin-bottom: 5px;
+    display: block;
 }
